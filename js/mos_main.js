@@ -66,13 +66,36 @@ var vip_pool = L.marker([39.286308, -76.765487]).addTo(mymap); // VIP Billiards
 var fandm = L.marker([39.283805, -76.762521]).addTo(mymap); // F&M Discount Store
 var coppin = L.marker([39.312175, -76.658784]).addTo(mymap); // Coppin State University
 
-// Routes
-// Mr. S body discovery
-var sellers_route = L.polyline(sellers_route.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap);
+// Routes and Stops
 
-// Potential route HML planned on taking after school
-var woodlawn_owings = L.polyline(woodlawn_owings.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap);
-var owings_campfield = L.polyline(owings_campfield.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap);
+// // Mr. S body discovery
+// var sellers_route = L.polyline(sellers_route.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap);
+// var body_discovery = L.polyline([
+// 		[39.301692, -76.699482],
+// 		[39.301414, -76.699502]
+// ]).addTo(mymap);
+// var sellers_stop = L.circle([39.301414, -76.699502], {
+//     color: 'red',
+//     fillColor: '#000000',
+//     fillOpacity: 0.5,
+//     radius: 15
+// }).addTo(mymap);
+//sellers_route.bindPopup("Mr. S's route").openPopup();
+
+// // Potential route HML planned on taking after school
+// var woodlawn_owings = L.polyline(woodlawn_owings.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap);
+// var owings_campfield = L.polyline(owings_campfield.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap);
+// var owingspark_lens = L.polyline([
+// 		[39.40611, -76.7921],
+// 		[39.406257, -76.790271]
+// ]).addTo(mymap);
+// var hml_stop = L.circle([39.406095, -76.792272], {
+//     color: 'red',
+//     fillColor: '#000000',
+//     fillOpacity: 0.5,
+//     radius: 15
+// }).addTo(mymap);
+
 
 // Sensitive places of interest (general neighborhoods)
 var hae_home = L.polygon([
@@ -149,8 +172,6 @@ vip_pool.bindPopup("VIP Billiards").openPopup();
 fandm.bindPopup("F&M Discount Store").openPopup();
 coppin.bindPopup("Coppin State University").openPopup();
 
-// Polyline popup messages
-sellers_route.bindPopup("Mr. S's route").openPopup();
 
 // // Labels
 // var leakin_park = L.marker(

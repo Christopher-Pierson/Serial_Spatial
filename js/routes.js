@@ -723,19 +723,7 @@ var woodlawn_owings = {
 { "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 329 }, "geometry": { "type": "Point", "coordinates": [ -76.79273, 39.4054 ] } },
 { "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 330 }, "geometry": { "type": "Point", "coordinates": [ -76.79262, 39.40554 ] } },
 { "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 331 }, "geometry": { "type": "Point", "coordinates": [ -76.79221, 39.40608 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 332 }, "geometry": { "type": "Point", "coordinates": [ -76.79221, 39.40608 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 333 }, "geometry": { "type": "Point", "coordinates": [ -76.79215, 39.40606 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 334 }, "geometry": { "type": "Point", "coordinates": [ -76.79202, 39.40608 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 335 }, "geometry": { "type": "Point", "coordinates": [ -76.79187, 39.40614 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 336 }, "geometry": { "type": "Point", "coordinates": [ -76.79171, 39.4063 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 337 }, "geometry": { "type": "Point", "coordinates": [ -76.79171, 39.4063 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 338 }, "geometry": { "type": "Point", "coordinates": [ -76.79143, 39.40617 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 339 }, "geometry": { "type": "Point", "coordinates": [ -76.79122, 39.40607 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 340 }, "geometry": { "type": "Point", "coordinates": [ -76.79105, 39.406 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 341 }, "geometry": { "type": "Point", "coordinates": [ -76.79082, 39.40589 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 342 }, "geometry": { "type": "Point", "coordinates": [ -76.79082, 39.40589 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 343 }, "geometry": { "type": "Point", "coordinates": [ -76.79044, 39.40645 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 344 }, "geometry": { "type": "Point", "coordinates": [ -76.79044, 39.40645 ] } }
+{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 332 }, "geometry": { "type": "Point", "coordinates": [ -76.79221, 39.40608 ] } }
 ]
 }
 
@@ -744,22 +732,6 @@ var owings_campfield = {
 "name": "track_points",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 0 }, "geometry": { "type": "Point", "coordinates": [ -76.79044, 39.40645 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 1 }, "geometry": { "type": "Point", "coordinates": [ -76.79082, 39.40589 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 2 }, "geometry": { "type": "Point", "coordinates": [ -76.79082, 39.40589 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 3 }, "geometry": { "type": "Point", "coordinates": [ -76.79105, 39.406 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 4 }, "geometry": { "type": "Point", "coordinates": [ -76.79122, 39.40607 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 5 }, "geometry": { "type": "Point", "coordinates": [ -76.79143, 39.40617 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 6 }, "geometry": { "type": "Point", "coordinates": [ -76.79171, 39.4063 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 7 }, "geometry": { "type": "Point", "coordinates": [ -76.79186, 39.40637 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 8 }, "geometry": { "type": "Point", "coordinates": [ -76.79203, 39.40643 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 9 }, "geometry": { "type": "Point", "coordinates": [ -76.79226, 39.40653 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 10 }, "geometry": { "type": "Point", "coordinates": [ -76.79235, 39.40657 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 11 }, "geometry": { "type": "Point", "coordinates": [ -76.79235, 39.40657 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 12 }, "geometry": { "type": "Point", "coordinates": [ -76.79241, 39.40647 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 13 }, "geometry": { "type": "Point", "coordinates": [ -76.79245, 39.40637 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 14 }, "geometry": { "type": "Point", "coordinates": [ -76.79244, 39.40633 ] } },
-{ "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 15 }, "geometry": { "type": "Point", "coordinates": [ -76.79243, 39.40624 ] } },
 { "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 16 }, "geometry": { "type": "Point", "coordinates": [ -76.79232, 39.40611 ] } },
 { "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 17 }, "geometry": { "type": "Point", "coordinates": [ -76.79232, 39.40611 ] } },
 { "type": "Feature", "properties": { "track_fid": 0, "track_seg_id": 0, "track_seg_point_id": 18 }, "geometry": { "type": "Point", "coordinates": [ -76.79288, 39.4055 ] } },

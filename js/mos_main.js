@@ -32,18 +32,44 @@ var baseLayers = {
 	"Light": Stadia_AlidadeSmooth
 };
 
+// Cell Towers
+var l602 = L.marker([39.29108, -76.615021]).bindPopup('Cell Site L602'),
+		l608 = L.marker([39.25528, -76.6753]).bindPopup('Cell Site L608'),
+    l651 = L.marker([39.30806, -76.74]).bindPopup('Cell Site L651'),
+		l652 = L.marker([39.296388, -76.665376]).bindPopup('Cell Site L652'),
+    l653 = L.marker([39.28556, -76.6986]).bindPopup('Cell Site L653'),
+    l654 = L.marker([39.28639, -76.7339]).bindPopup('Cell Site L654'),
+		l655 = L.marker([39.26083, -76.7133]).bindPopup('Cell Site L655'),
+		l688 = L.marker([39.297725, -76.832527]).bindPopup('Cell Site L688'),
+		l689 = L.marker([39.3111, -76.7008]).bindPopup('Cell Site L689'),
+		l698 = L.marker([39.28861, -76.7606]).bindPopup('Cell Site L698');
+
+var cell_towers = L.layerGroup([l602, l608, l651, l652, l653, l654, l655, l688, l689, l698]);
+
+var overlayMaps = {
+    "Cell Towers": cell_towers
+};
+
 // add ability to select basemap in layer controls
-L.control.layers(baseLayers).addTo(mymap);
+L.control.layers(baseLayers, overlayMaps).addTo(mymap);
 
 //
 // Don't edit above here!
 //
 
-// Leaflet Demo Stuff
-var littleton = L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.'),
-    denver    = L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.'),
-    aurora    = L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.'),
-    golden    = L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.');
+// Cell Towers
+var l602 = L.marker([39.29108, -76.615021]).bindPopup('Cell Site L602'),
+		l608 = L.marker([39.25528, -76.6753]).bindPopup('Cell Site L608'),
+    l651 = L.marker([39.30806, -76.74]).bindPopup('Cell Site L651'),
+		l652 = L.marker([39.296388, -76.665376]).bindPopup('Cell Site L652'),
+    l653 = L.marker([39.28556, -76.6986]).bindPopup('Cell Site L653'),
+    l654 = L.marker([39.28639, -76.7339]).bindPopup('Cell Site L654'),
+		l655 = L.marker([39.26083, -76.7133]).bindPopup('Cell Site L655'),
+		l688 = L.marker([39.297725, -76.832527]).bindPopup('Cell Site L688'),
+		l689 = L.marker([39.3111, -76.7008]).bindPopup('Cell Site L689'),
+		l698 = L.marker([39.28861, -76.7606]).bindPopup('Cell Site L698');
+
+var cell_towers = L.layerGroup([l602, l608, l651, l652, l653, l654, l655, l688, l689, l698]);
 
 // Public places of interest
 var library = L.marker([39.316697, -76.736535]).addTo(mymap); // Woodlawn Public Library marker

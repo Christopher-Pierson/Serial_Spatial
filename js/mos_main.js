@@ -67,6 +67,9 @@ var vip_pool = L.marker([39.286308, -76.765487]).addTo(mymap); // VIP Billiards
 var fandm = L.marker([39.283805, -76.762521]).addTo(mymap); // F&M Discount Store
 var mcd = L.marker([39.28466, -76.752403]).addTo(mymap); // McDonald's on Rolling Road
 var coppin = L.marker([39.312175, -76.658784]).addTo(mymap); // Coppin State University
+var forestpark = L.marker([39.323505, -76.688304]).addTo(mymap); // Forest Park neighborhood
+var superfresh = L.marker([39.287865, -76.764618]).addTo(mymap); // Super Fresh Market
+var seven11 = L.marker([39.286238, -76.75235]).addTo(mymap); // 7-Eleven
 
 // Routes and Stops
 
@@ -102,37 +105,92 @@ var coppin = L.marker([39.312175, -76.658784]).addTo(mymap); // Coppin State Uni
 // var woodlawn_lib = L.polyline([
 // 		[39.316697, -76.736535],
 // 		[39.315371, -76.734422]
-// ]).addTo(mymap); // walks from Woodlawn high school to the library
+// ]).addTo(mymap); // walks from Woodlawn high school to the library --- probably delete
 // var lib_track = L.polyline([
 // 		[39.316697, -76.736535],
 // 		[39.315105, -76.730281]
-//]).addTo(mymap); // walks from the library to the Woodlawn track
+//]).addTo(mymap); // walks from the library to the Woodlawn track --- probably delete
+// var woodlawn_kristi = L.polyline(woodlawn_kristi.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 7.1 miles, 16 minutes
+// var kristi_adnan = L.polyline(kristi_adnan.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 6.6 miles. 12 minutes
+// var adnan_mosque = L.polyline(adnan_mosque.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 0.8 miles, 4 minutes
+// var mosque_walk = L.polyline([
+// 		[39.303238, -76.747205],
+// 		[39.303512, -76.748056]
+// ]).addTo(mymap);
+// var ad_kristi_stop = L.circle([39.26187, -76.69853], {
+//     color: 'red',
+//     fillColor: '#000000',
+//     fillOpacity: 0.5,
+//     radius: 75
+// }).addTo(mymap);
+// var ad_adnan_stop = L.circle([39.30538, -76.75905], {
+//     color: 'red',
+//     fillColor: '#000000',
+//     fillOpacity: 0.5,
+//     radius: 75
+// }).addTo(mymap);
+// var ad_mosque_stop = L.circle([39.30325, -76.74703], {
+//     color: 'red',
+//     fillColor: '#000000',
+//     fillOpacity: 0.5,
+//     radius: 15
+// }).addTo(mymap);
 
+// Jay's Version of Events
+// Interview #1
+var woodlawn_jay = L.polyline(woodlawn_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.1 miles, 9 minutes
+var jay_westview = L.polyline(jay_westview.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 1.0 miles, 4 minutes
+var westview_woodlawn = L.polyline(westview_woodlawn.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 2.4 miles, 8 minutes
+var woodlawn_jenn = L.polyline(woodlawn_jenn.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 2.5 miles, 6 minutes
+var jenn_trunkpop = L.polyline(jenn_trunkpop.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 4.2 miles, 13 minutes
+var trunkpop_i70 = L.polyline(trunkpop_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.3 miles, 9 minutes
+var i70_cliffs = L.polyline(i70_cliffs.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 6.3 miles, 17 minutes
+var cliffs_woodlawn = L.polyline(cliffs_woodlawn.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 5.6 miles, 15 minutes
+var woodlawn_mcds = L.polyline(woodlawn_mcds.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.4 miles, 10 minutes
+var mcds_jay = L.polyline(mcds_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 0.5 miles, 2 minutes
+var jay_i70 = L.polyline(jay_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.4 miles, 8 minutes
+var i70_leakin = L.polyline(i70_leakin.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 1.4 miles, 4 minutes
+var leakin_lot = L.polyline(leakin_lot.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 2.4 miles, 8 minutes
+var lot_westview = L.polyline(lot_westview.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.5 miles, 11 minutes
+var westview_jay = L.polyline(westview_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 1.0 miles, 3 minutes
+var jay_seven11 = L.polyline(jay_seven11.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 0.5 miles, 2 minutes
+
+// Interview #2
+var jenn_bb = L.polyline(jenn_bb.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.8 miles, 8 minutes
+var bb_i70 = L.polyline(bb_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.4 miles, 9 minutes
+var i70_forestpark = L.polyline(i70_forestpark.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 2.5 miles, 6 minutes
+var forestpark_cliffs = L.polyline(forestpark_cliffs.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 7.8 miles, 19 minutes
+var cliffs_woodlawn = L.polyline(cliffs_woodlawn.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 5.6 miles, 15 minutes
 var woodlawn_kristi = L.polyline(woodlawn_kristi.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 7.1 miles, 16 minutes
-var kristi_adnan = L.polyline(kristi_adnan.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 6.6 miles. 12 minutes
-var adnan_mosque = L.polyline(adnan_mosque.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 0.8 miles, 4 minutes
-var mosque_walk = L.polyline([
-		[39.303238, -76.747205],
-		[39.303512, -76.748056]
-]).addTo(mymap);
-var ad_kristi_stop = L.circle([39.26187, -76.69853], {
-    color: 'red',
-    fillColor: '#000000',
-    fillOpacity: 0.5,
-    radius: 75
-}).addTo(mymap);
-var ad_adnan_stop = L.circle([39.30538, -76.75905], {
-    color: 'red',
-    fillColor: '#000000',
-    fillOpacity: 0.5,
-    radius: 75
-}).addTo(mymap);
-var ad_mosque_stop = L.circle([39.30325, -76.74703], {
-    color: 'red',
-    fillColor: '#000000',
-    fillOpacity: 0.5,
-    radius: 15
-}).addTo(mymap);
+var kristi_jay = L.polyline(kristi_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.9 miles, 7 minutes
+var jay_i70 = L.polyline(jay_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.4 miles, 8 minutes
+var i70_leakin = L.polyline(i70_leakin.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 1.4 miles, 4 minutes
+var leakin_lot = L.polyline(leakin_lot.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 2.4 miles, 8 minutes
+var lot_westview = L.polyline(lot_westview.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.5 miles, 11 minutes
+var westview_jay = L.polyline(westview_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 1.0 miles, 3 minutes
+var jay_fandm = L.polyline(jay_fandm.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 0.9 miles, 3 minutes
+
+// Testimony at 2nd Trial
+var jenn_bb = L.polyline(jenn_bb.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.8 miles, 8 minutes
+var bb_i70 = L.polyline(bb_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.4 miles, 9 minutes
+var i70_patrick = L.polyline(i70_patrick.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 2.3 miles, 7 minutes
+var patrick_forestpark = L.polyline(patrick_forestpark.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 4.2 miles, 12 minutes
+var forestpark_woodlawn = L.polyline(forestpark_woodlawn.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.4 miles, 8 minutes
+var woodlawn_kristi = L.polyline(woodlawn_kristi.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 7.1 miles, 16 minutes
+var kristi_jay = L.polyline(kristi_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.9 miles, 7 minutes
+var jay_i70 = L.polyline(jay_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.4 miles, 8 minutes
+var i70_leakin = L.polyline(i70_leakin.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 1.4 miles, 4 minutes
+var leakin_lot = L.polyline(leakin_lot.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 2.4 miles, 8 minutes
+var lot_westview = L.polyline(lot_westview.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.5 miles, 11 minutes
+var westview_jay = L.polyline(westview_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 1.0 miles, 3 minutes
+var jay_superfresh = L.polyline(jay_superfresh.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 1.1 miles, 4 minutes
+
+// var _stop = L.circle([ , ], {
+//     color: 'red',
+//     fillColor: '#000000',
+//     fillOpacity: 0.5,
+//     radius: 15
+// }).addTo(mymap);
 
 // Sensitive places of interest (general neighborhoods)
 var hae_home = L.polygon([
@@ -210,6 +268,8 @@ vip_pool.bindPopup("VIP Billiards").openPopup();
 fandm.bindPopup("F&M Discount Store").openPopup();
 mcd.bindPopup("McDonald's on Rolling Road").openPopup();
 coppin.bindPopup("Coppin State University").openPopup();
+forestpark.bindPopup("Forest Park Neighborhood").openPopup();
+superfresh.bindPopup("Super Fresh Halal Market").openPopup();
 
 hae_home.bindPopup("Hae Min Lee's house").openPopup();
 adnan_home.bindPopup("Adnan Syed's house").openPopup();
@@ -218,6 +278,8 @@ jenn_home.bindPopup("Jenn Pusateri's house").openPopup();
 kristi_home.bindPopup("Kristi Vinson's (Not-her-real-name Cathy) house").openPopup();
 patrick_home.bindPopup("Patrick's house").openPopup();
 alonzo_home.bindPopup("Alonzo Sellers' (Mr. S) house").openPopup();
+
+jay_i70.bindPopup("Yup").openPopup();
 
 
 // // Labels

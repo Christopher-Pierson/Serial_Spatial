@@ -61,15 +61,17 @@ var isb = L.marker([39.303512, -76.748056]).addTo(mymap); // Baltimore Islamic S
 var parknride = L.marker([39.301524, -76.710094]).addTo(mymap); // I-70 Park-and-Ride
 var cliffs = L.marker([39.250525, -76.763524]).addTo(mymap); // Cliffs at Patapsco State Park
 var westview = L.marker([39.289264, -76.735135]).addTo(mymap); // Westview Mall
+var secsquare = L.marker([39.309365, -76.749265]).addTo(mymap); // Security Square Mall
 var bluejay_pool = L.marker([39.288143, -76.764446]).addTo(mymap); // Blue Jay Cue Club
 var vip_pool = L.marker([39.286308, -76.765487]).addTo(mymap); // VIP Billiards
 var fandm = L.marker([39.283805, -76.762521]).addTo(mymap); // F&M Discount Store
+var mcd = L.marker([39.28466, -76.752403]).addTo(mymap); // McDonald's on Rolling Road
 var coppin = L.marker([39.312175, -76.658784]).addTo(mymap); // Coppin State University
 
 // Routes and Stops
 
 // // Mr. S body discovery
-// var sellers_route = L.polyline(sellers_route.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap);
+// var sellers_route = L.polyline(sellers_route.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 5.6 miles, 15 minutes
 // var body_discovery = L.polyline([
 // 		[39.301692, -76.699482],
 // 		[39.301414, -76.699502]
@@ -83,8 +85,8 @@ var coppin = L.marker([39.312175, -76.658784]).addTo(mymap); // Coppin State Uni
 //sellers_route.bindPopup("Mr. S's route").openPopup();
 
 // // Potential route HML planned on taking after school
-// var woodlawn_owings = L.polyline(woodlawn_owings.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap);
-// var owings_campfield = L.polyline(owings_campfield.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap);
+// var woodlawn_owings = L.polyline(woodlawn_owings.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 10.3 miles, 14 minutes
+// var owings_campfield = L.polyline(owings_campfield.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 8 miles, 13 minutes
 // var owingspark_lens = L.polyline([
 // 		[39.40611, -76.7921],
 // 		[39.406257, -76.790271]
@@ -96,6 +98,41 @@ var coppin = L.marker([39.312175, -76.658784]).addTo(mymap); // Coppin State Uni
 //     radius: 15
 // }).addTo(mymap);
 
+// Adnan's Day
+// var woodlawn_lib = L.polyline([
+// 		[39.316697, -76.736535],
+// 		[39.315371, -76.734422]
+// ]).addTo(mymap); // walks from Woodlawn high school to the library
+// var lib_track = L.polyline([
+// 		[39.316697, -76.736535],
+// 		[39.315105, -76.730281]
+//]).addTo(mymap); // walks from the library to the Woodlawn track
+
+var woodlawn_kristi = L.polyline(woodlawn_kristi.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 7.1 miles, 16 minutes
+var kristi_adnan = L.polyline(kristi_adnan.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 6.6 miles. 12 minutes
+var adnan_mosque = L.polyline(adnan_mosque.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 0.8 miles, 4 minutes
+var mosque_walk = L.polyline([
+		[39.303238, -76.747205],
+		[39.303512, -76.748056]
+]).addTo(mymap);
+var ad_kristi_stop = L.circle([39.26187, -76.69853], {
+    color: 'red',
+    fillColor: '#000000',
+    fillOpacity: 0.5,
+    radius: 75
+}).addTo(mymap);
+var ad_adnan_stop = L.circle([39.30538, -76.75905], {
+    color: 'red',
+    fillColor: '#000000',
+    fillOpacity: 0.5,
+    radius: 75
+}).addTo(mymap);
+var ad_mosque_stop = L.circle([39.30325, -76.74703], {
+    color: 'red',
+    fillColor: '#000000',
+    fillOpacity: 0.5,
+    radius: 15
+}).addTo(mymap);
 
 // Sensitive places of interest (general neighborhoods)
 var hae_home = L.polygon([
@@ -167,10 +204,20 @@ isb.bindPopup("Baltimore Islamic Society (Adnan's mosque)").openPopup();
 parknride.bindPopup("I-70 Park-and-Ride").openPopup();
 cliffs.bindPopup("The Cliffs at Patapsco State Park").openPopup();
 westview.bindPopup("Westview Mall").openPopup();
+secsquare.bindPopup("Security Square Mall").openPopup();
 bluejay_pool.bindPopup("Blue Jay Cue Club").openPopup();
 vip_pool.bindPopup("VIP Billiards").openPopup();
 fandm.bindPopup("F&M Discount Store").openPopup();
+mcd.bindPopup("McDonald's on Rolling Road").openPopup();
 coppin.bindPopup("Coppin State University").openPopup();
+
+hae_home.bindPopup("Hae Min Lee's house").openPopup();
+adnan_home.bindPopup("Adnan Syed's house").openPopup();
+jay_home.bindPopup("Jay Wilds' house").openPopup();
+jenn_home.bindPopup("Jenn Pusateri's house").openPopup();
+kristi_home.bindPopup("Kristi Vinson's (Not-her-real-name Cathy) house").openPopup();
+patrick_home.bindPopup("Patrick's house").openPopup();
+alonzo_home.bindPopup("Alonzo Sellers' (Mr. S) house").openPopup();
 
 
 // // Labels

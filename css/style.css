@@ -1,3 +1,128 @@
 /* Stylesheet by Christopher Pierson, 2020 */
 
-#mapid { height: 800px; }
+#mapid {
+  height: 416px;
+  width: 100%;
+}
+
+.content{
+    margin:40px auto;
+    max-width:650px;
+    line-height:1.6;
+    font-size:18px;
+    color:#444;
+    padding:0 10px;
+}
+
+h1, h2, h3{
+    line-height:1.2
+}
+
+body{
+  margin: 0px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  font-family: 'Open sans Condensed';
+  z-index: 5000;
+}
+
+.navbar .left {
+	width: 30%;
+    display: inline-block;
+    text-align: center;
+}
+
+.navbar .right {
+	width: 45%;
+    display: inline-block;
+    text-align: center;
+}
+
+.navbar .navitem {
+  display: inline-block;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar .navitem:hover {
+  color: rgb(242, 240, 200);
+  text-decoration: underline;
+}
+
+.navbar .navitem.active {
+  background-color: #ed1b25;
+  color: white;
+}
+
+.logo {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 26px;
+  pointer-events: none;
+  color: rgb(242, 240, 200);
+  font-family: 'Open sans Condensed';
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: : Thin 100;
+}
+
+.navbar a {
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navbar .navitem.dropdown {
+  padding: 0px;
+}
+
+.dropdown .dropbtn {
+  font-size: inherit;
+  border: none;
+  outline: none;
+  color: inherit;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  padding: 14px 16px;
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + .content {
+  padding-top: 15px;
+}

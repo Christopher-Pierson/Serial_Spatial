@@ -35,7 +35,7 @@ var baseLayers = {
 // Icons
 // Cell Tower icon
 var celltowerIcon = L.icon({
-    iconUrl: 'lib/leaflet/images/noun_signal_31331.png',
+    iconUrl: 'lib/leaflet/images/noun_signal_31331.png', 
     iconSize:     [50, 50], // size of the icon
     iconAnchor:   [25, 25], // point of the icon which will correspond to marker's location
     popupAnchor:  [0, -10] // point from which the popup should open relative to the iconAnchor
@@ -305,6 +305,7 @@ mcd.bindPopup("McDonald's on Rolling Road").openPopup();
 coppin.bindPopup("Coppin State University").openPopup();
 forestpark.bindPopup("Forest Park Neighborhood").openPopup();
 superfresh.bindPopup("Super Fresh Halal Market").openPopup();
+seven11.bindPopup("7-Eleven").openPopup();
 
 hae_home.bindPopup("Hae Min Lee's house").openPopup();
 adnan_home.bindPopup("Adnan Syed's house").openPopup();

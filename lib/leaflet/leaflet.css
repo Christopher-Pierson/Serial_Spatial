@@ -639,21 +639,39 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	border-right-color: #fff;
 	}
 
+#myeasybar {
+
+	z-index: 99999;
+	top: 0px;
+	left: 0px;
+}
+
+#myeasybar button{
+  width : 26px;
+  height: 26px;
+  display: inline-block;
+	border-radius: 4px;
+  border:.5px solid #e7e7e7;
+}
+
 .leaflet-bar button,
 .leaflet-bar button:hover {
 	  background-color: #fff;
 	  border: none;
 	  padding: 0px;
 	  border-bottom: 1px solid #ccc;
-	  width: 26px;
-	  height: 27px;
+	  width: 100%;
+	  height: 100%;
 	  line-height: 26px;
 	  display: block;
-	  text-align: center;
-	  text-decoration: none;
 	  color: black;
 		border-radius: 4px;
 }
+
+.leaflet-bar button:hover {
+	background-color: #f4f4f4;
+	}
+
 
 .easy-button-button .button-state{
   display: block;

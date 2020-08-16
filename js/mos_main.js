@@ -22,7 +22,11 @@ var Stadia_AlidadeSmoothDark = L.tileLayer('https://tiles.stadiamaps.com/tiles/a
 var mymap = L.map('mapid', {
 	center: [39.315856, -76.734406],
 	zoom: 16,
-	layers: [Stadia_AlidadeSmooth, Stadia_AlidadeSmoothDark, Esri_WorldImagery]
+	layers: [Stadia_AlidadeSmooth, Stadia_AlidadeSmoothDark, Esri_WorldImagery],
+	fullscreenControl: true,
+  fullscreenControlOptions: {
+    position: 'topleft'
+	}
 });
 
 // add basemap options as object with key value pairs
@@ -35,7 +39,7 @@ var baseLayers = {
 // Icons
 // Cell Tower icon
 var celltowerIcon = L.icon({
-    iconUrl: 'lib/leaflet/images/noun_signal_31331.png', 
+    iconUrl: 'lib/leaflet/images/noun_signal_31331.png',
     iconSize:     [50, 50], // size of the icon
     iconAnchor:   [25, 25], // point of the icon which will correspond to marker's location
     popupAnchor:  [0, -10] // point from which the popup should open relative to the iconAnchor
@@ -53,7 +57,7 @@ var l602 = L.marker([39.291229, -76.615098], {icon: celltowerIcon}).bindPopup('C
 		l689 = L.marker([39.310693, -76.69892], {icon: celltowerIcon}).bindPopup('Cell Site L689'),
 		l698 = L.marker([39.287898, -76.7603], {icon: celltowerIcon}).bindPopup('Cell Site L698');
 // Cell tower layer group
-var cell_towers = L.layerGroup([l602, l608, l651, l652, l653, l654, l655, l688, l689, l698]);
+var cell_towers = L.layerGroup([l602, l608, l651, l652, l653, l654, l655, l688, l689, l698]).addTo(mymap);
 
 var overlayMaps = {
     "Cell Towers": cell_towers
@@ -66,19 +70,7 @@ L.control.layers(baseLayers, overlayMaps).addTo(mymap);
 // Don't edit above here!
 //
 
-// Cell Towers
-var l602 = L.marker([39.29108, -76.615021]).bindPopup('Cell Site L602'),
-		l608 = L.marker([39.25528, -76.6753]).bindPopup('Cell Site L608'),
-    l651 = L.marker([39.30806, -76.74]).bindPopup('Cell Site L651'),
-		l652 = L.marker([39.296388, -76.665376]).bindPopup('Cell Site L652'),
-    l653 = L.marker([39.28556, -76.6986]).bindPopup('Cell Site L653'),
-    l654 = L.marker([39.28639, -76.7339]).bindPopup('Cell Site L654'),
-		l655 = L.marker([39.26083, -76.7133]).bindPopup('Cell Site L655'),
-		l688 = L.marker([39.297725, -76.832527]).bindPopup('Cell Site L688'),
-		l689 = L.marker([39.3111, -76.7008]).bindPopup('Cell Site L689'),
-		l698 = L.marker([39.28861, -76.7606]).bindPopup('Cell Site L698');
 
-var cell_towers = L.layerGroup([l602, l608, l651, l652, l653, l654, l655, l688, l689, l698]);
 
 // Public places of interest
 var library = L.marker([39.316697, -76.736535]).addTo(mymap); // Woodlawn Public Library marker
@@ -169,56 +161,107 @@ var seven11 = L.marker([39.286238, -76.75235]).addTo(mymap); // 7-Eleven
 //     fillColor: '#000000',
 //     fillOpacity: 0.5,
 //     radius: 15
-// }).addTo(mymap);
-
-// Jay's Version of Events
+// }).addTo(mymap)'s Version of Events
 // Interview #1
-var woodlawn_jay_route = L.polyline(woodlawn_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.1 miles, 9 minutes
-var jay_westview_route = L.polyline(jay_westview.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 1.0 miles, 4 minutes
-var westview_woodlawn_route = L.polyline(westview_woodlawn.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 2.4 miles, 8 minutes
-var woodlawn_jenn_route = L.polyline(woodlawn_jenn.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 2.5 miles, 6 minutes
-var jenn_trunkpop_route = L.polyline(jenn_trunkpop.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 4.2 miles, 13 minutes
-var trunkpop_i70_route = L.polyline(trunkpop_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.3 miles, 9 minutes
-var i70_cliffs_route = L.polyline(i70_cliffs.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 6.3 miles, 17 minutes
-var cliffs_woodlawn_route = L.polyline(cliffs_woodlawn.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 5.6 miles, 15 minutes
-var woodlawn_mcds_route = L.polyline(woodlawn_mcds.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.4 miles, 10 minutes
-var mcds_jay_route = L.polyline(mcds_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 0.5 miles, 2 minutes
-var jay_i70_route = L.polyline(jay_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.4 miles, 8 minutes
-var i70_leakin_route = L.polyline(i70_leakin.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 1.4 miles, 4 minutes
-var leakin_lot_route = L.polyline(leakin_lot.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 2.4 miles, 8 minutes
-var lot_westview_route = L.polyline(lot_westview.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.5 miles, 11 minutes
-var westview_jay_route = L.polyline(westview_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 1.0 miles, 3 minutes
-var jay_seven11_route = L.polyline(jay_seven11.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 0.5 miles, 2 minutes
+var woodlawn_jay_route = L.polyline(woodlawn_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])); // 3.1 miles, 9 minutes
+var jay_westview_route = L.polyline(jay_westview.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])); // 1.0 miles, 4 minutes
+var westview_woodlawn_route = L.polyline(westview_woodlawn.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])); // 2.4 miles, 8 minutes
+var woodlawn_jenn_route = L.polyline(woodlawn_jenn.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])); // 2.5 miles, 6 minutes
+var jenn_trunkpop_route = L.polyline(jenn_trunkpop.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])); // 4.2 miles, 13 minutes
+var trunkpop_i70_route = L.polyline(trunkpop_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])); // 3.3 miles, 9 minutes
+var i70_cliffs_route = L.polyline(i70_cliffs.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])); // 6.3 miles, 17 minutes
+var cliffs_woodlawn_route = L.polyline(cliffs_woodlawn.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])); // 5.6 miles, 15 minutes
+var woodlawn_mcds_route = L.polyline(woodlawn_mcds.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])); // 3.4 miles, 10 minutes
+var mcds_jay_route = L.polyline(mcds_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])); // 0.5 miles, 2 minutes
+var jay_i70_route = L.polyline(jay_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])); // 3.4 miles, 8 minutes
+var i70_leakin_route = L.polyline(i70_leakin.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])); // 1.4 miles, 4 minutes
+var leakin_lot_route = L.polyline(leakin_lot.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])); // 2.4 miles, 8 minutes
+var lot_westview_route = L.polyline(lot_westview.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])); // 3.5 miles, 11 minutes
+var westview_jay_route = L.polyline(westview_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])); // 1.0 miles, 3 minutes
+var jay_seven11_route = L.polyline(jay_seven11.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])); // 0.5 miles, 2 minutes
 
-// Interview #2
-var jenn_bb_route = L.polyline(jenn_bb.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.8 miles, 8 minutes
-var bb_i70_route = L.polyline(bb_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.4 miles, 9 minutes
-var i70_forestpark_route = L.polyline(i70_forestpark.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 2.5 miles, 6 minutes
-var forestpark_cliffs_route = L.polyline(forestpark_cliffs.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 7.8 miles, 19 minutes
-var cliffs_woodlawn_route = L.polyline(cliffs_woodlawn.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 5.6 miles, 15 minutes
-var woodlawn_kristi_route = L.polyline(woodlawn_kristi.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 7.1 miles, 16 minutes
-var kristi_jay_route = L.polyline(kristi_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.9 miles, 7 minutes
-var jay_i70_route = L.polyline(jay_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.4 miles, 8 minutes
-var i70_leakin_route = L.polyline(i70_leakin.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 1.4 miles, 4 minutes
-var leakin_lot_route = L.polyline(leakin_lot.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 2.4 miles, 8 minutes
-var lot_westview_route = L.polyline(lot_westview.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.5 miles, 11 minutes
-var westview_jay_route = L.polyline(westview_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 1.0 miles, 3 minutes
-var jay_fandm_route = L.polyline(jay_fandm.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 0.9 miles, 3 minutes
+jay_seven11_route.setStyle({color: "red"});
 
-// Testimony at 2nd Trial
-var jenn_bb_route = L.polyline(jenn_bb.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.8 miles, 8 minutes
-var bb_i70_route = L.polyline(bb_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.4 miles, 9 minutes
-var i70_patrick_route = L.polyline(i70_patrick.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 2.3 miles, 7 minutes
-var patrick_forestpark_route = L.polyline(patrick_forestpark.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 4.2 miles, 12 minutes
-var forestpark_woodlawn_route = L.polyline(forestpark_woodlawn.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.4 miles, 8 minutes
-var woodlawn_kristi_route = L.polyline(woodlawn_kristi.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 7.1 miles, 16 minutes
-var kristi_jay_route = L.polyline(kristi_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.9 miles, 7 minutes
-var jay_i70_route = L.polyline(jay_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.4 miles, 8 minutes
-var i70_leakin_route = L.polyline(i70_leakin.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 1.4 miles, 4 minutes
-var leakin_lot_route = L.polyline(leakin_lot.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 2.4 miles, 8 minutes
-var lot_westview_route = L.polyline(lot_westview.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.5 miles, 11 minutes
-var westview_jay_route = L.polyline(westview_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 1.0 miles, 3 minutes
-var jay_superfresh_route = L.polyline(jay_superfresh.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 1.1 miles, 4 minutes
+// create list of all routes
+var route_list = [
+		woodlawn_jay_route,
+		jay_westview_route,
+		westview_woodlawn_route,
+		woodlawn_jenn_route,
+		jenn_trunkpop_route,
+		trunkpop_i70_route,
+		i70_cliffs_route,
+		cliffs_woodlawn_route,
+		woodlawn_mcds_route,
+		mcds_jay_route,
+		jay_i70_route,
+		i70_leakin_route,
+		leakin_lot_route,
+		lot_westview_route,
+		westview_jay_route,
+		jay_seven11_route
+];
+
+var route_index = -1;
+
+var default_style = {color: "rgb(51, 136, 255)"}
+
+// function for going to next route in list
+function next_route(){
+		if (route_index >= route_list.length-1)
+				return;
+		if (route_index >= 0)
+				route_list[route_index].setStyle(default_style);
+		route_index = route_index + 1;
+		route_list[route_index].setStyle({color: "red"});
+		route_list[route_index].addTo(mymap);
+		var bounds = route_list[route_index].getBounds();
+		mymap.flyToBounds(bounds);
+
+}
+
+// function for going to previous route in list
+function prev_route(){
+	if (route_index <= -1)
+			return;
+		route_list[route_index].removeFrom(mymap);
+		route_index = route_index - 1;
+		if (route_index <= -1)
+				return;
+		route_list[route_index].setStyle({color: "red"})
+		var bounds = route_list[route_index].getBounds();
+		mymap.flyToBounds(bounds);
+}
+
+// // Interview #2
+// var jenn_bb_route = L.polyline(jenn_bb.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.8 miles, 8 minutes
+// var bb_i70_route = L.polyline(bb_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.4 miles, 9 minutes
+// var i70_forestpark_route = L.polyline(i70_forestpark.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 2.5 miles, 6 minutes
+// var forestpark_cliffs_route = L.polyline(forestpark_cliffs.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 7.8 miles, 19 minutes
+// var cliffs_woodlawn_route = L.polyline(cliffs_woodlawn.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 5.6 miles, 15 minutes
+// var woodlawn_kristi_route = L.polyline(woodlawn_kristi.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 7.1 miles, 16 minutes
+// var kristi_jay_route = L.polyline(kristi_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.9 miles, 7 minutes
+// var jay_i70_route = L.polyline(jay_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.4 miles, 8 minutes
+// var i70_leakin_route = L.polyline(i70_leakin.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 1.4 miles, 4 minutes
+// var leakin_lot_route = L.polyline(leakin_lot.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 2.4 miles, 8 minutes
+// var lot_westview_route = L.polyline(lot_westview.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.5 miles, 11 minutes
+// var westview_jay_route = L.polyline(westview_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 1.0 miles, 3 minutes
+// var jay_fandm_route = L.polyline(jay_fandm.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 0.9 miles, 3 minutes
+//
+// // Testimony at 2nd Trial
+// var jenn_bb_route = L.polyline(jenn_bb.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.8 miles, 8 minutes
+// var bb_i70_route = L.polyline(bb_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.4 miles, 9 minutes
+// var i70_patrick_route = L.polyline(i70_patrick.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 2.3 miles, 7 minutes
+// var patrick_forestpark_route = L.polyline(patrick_forestpark.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 4.2 miles, 12 minutes
+// var forestpark_woodlawn_route = L.polyline(forestpark_woodlawn.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.4 miles, 8 minutes
+// var woodlawn_kristi_route = L.polyline(woodlawn_kristi.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 7.1 miles, 16 minutes
+// var kristi_jay_route = L.polyline(kristi_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.9 miles, 7 minutes
+// var jay_i70_route = L.polyline(jay_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.4 miles, 8 minutes
+// var i70_leakin_route = L.polyline(i70_leakin.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 1.4 miles, 4 minutes
+// var leakin_lot_route = L.polyline(leakin_lot.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 2.4 miles, 8 minutes
+// var lot_westview_route = L.polyline(lot_westview.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 3.5 miles, 11 minutes
+// var westview_jay_route = L.polyline(westview_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 1.0 miles, 3 minutes
+// var jay_superfresh_route = L.polyline(jay_superfresh.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).addTo(mymap); // 1.1 miles, 4 minutes
 
 // var _stop = L.circle([ , ], {
 //     color: 'red',
@@ -344,6 +387,16 @@ function onMapClick(e) {
 	alert("You clicked the map at " + e.latlng);
 }
 mymap.on('click', onMapClick);
+
+// Add easy button to run the next_route function
+L.easyButton("next_button", function(){
+		next_route()
+},'Next Route',{ position: 'topleft' }).addTo(mymap);
+
+// Add easy button to run the prev_route function
+L.easyButton("next_button", function(){
+		prev_route()
+},'Previous Route',{ position: 'topleft' }).addTo(mymap);
 
 
 

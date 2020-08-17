@@ -71,20 +71,32 @@ var adnan_home = L.polygon([
 		[39.303089, -76.756357],
 		[39.302649, -76.757623],
 		[39.302848, -76.75876]
-]).bindPopup("Adnan Syed's neighborhood").openPopup();
+], {
+    color: 'tan',
+    fillColor: 'tan',
+    fillOpacity: 0.3,
+}).bindPopup("Adnan Syed's neighborhood").openPopup();
 var jay_home = L.polygon([
     [39.287961, -76.749501],
 		[39.287994, -76.746615],
 		[39.284357, -76.74727],
 		[39.284324, -76.749855]
-]).bindPopup("Jay Wilds' neighborhood").openPopup();
+], {
+    color: 'tan',
+    fillColor: 'tan',
+    fillOpacity: 0.3,
+}).bindPopup("Jay Wilds' neighborhood").openPopup();
 var kristi_home = L.polygon([
     [39.261649, -76.700535],
 		[39.26351, -76.698539],
 		[39.262281, -76.696694],
 		[39.26032, -76.698754],
 		[39.261234, -76.700224]
-]).bindPopup("Kristi Vinson's (Not-her-real-name Cathy) neighborhood").openPopup();
+], {
+    color: 'tan',
+    fillColor: 'tan',
+    fillOpacity: 0.3,
+}).bindPopup("Kristi Vinson's (Not-her-real-name Cathy) neighborhood").openPopup();
 
 // Sensitive plaecs of interest (genreal neighborhoods) layer group
 var neighborhoods = L.layerGroup([adnan_home, jay_home, kristi_home]).addTo(mymap);

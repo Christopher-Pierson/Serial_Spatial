@@ -20,8 +20,8 @@ var Stadia_AlidadeSmoothDark = L.tileLayer('https://tiles.stadiamaps.com/tiles/a
 
 // instantiate Leaflet map
 var mymap = L.map('mapid', {
-	center: [39.315856, -76.734406],
-	zoom: 16,
+	center: [39.313448903701506, -76.73963069915773],
+	zoom: 15,
 	layers: [Stadia_AlidadeSmooth, Stadia_AlidadeSmoothDark, Esri_WorldImagery], // [Stadia_AlidadeSmooth, Stadia_AlidadeSmoothDark, Esri_WorldImagery]
 	fullscreenControl: true,
   fullscreenControlOptions: {
@@ -45,6 +45,54 @@ var celltowerIcon = L.icon({
     popupAnchor:  [0, -10] // point from which the popup should open relative to the iconAnchor
 });
 
+// // Woodlawn HS icon
+// var woodlawnIcon = L.icon({
+//     iconUrl: 'lib/leaflet/images/school-duotone.png',
+//     iconSize:     [35, 30], // size of the icon
+//     iconAnchor:   [25, 25], // point of the icon which will correspond to marker's location
+//     popupAnchor:  [0, -10] // point from which the popup should open relative to the iconAnchor
+// });
+//
+// // Woodlawn Library iconUrl
+// var libIcon = L.icon({
+//     iconUrl: 'lib/leaflet/images/book-open-duotone.png',
+//     iconSize:     [35, 30], // size of the icon
+//     iconAnchor:   [25, 25], // point of the icon which will correspond to marker's location
+//     popupAnchor:  [0, -10] // point from which the popup should open relative to the iconAnchor
+// });
+//
+// // Woodlawn HS track icon
+// var trackIcon = L.icon({
+//     iconUrl: 'lib/leaflet/images/running-duotone.png',
+//     iconSize:     [35, 35], // size of the icon
+//     iconAnchor:   [25, 25], // point of the icon which will correspond to marker's location
+//     popupAnchor:  [0, -10] // point from which the popup should open relative to the iconAnchor
+// });
+//
+// // Gravesite icon
+// var graveIcon = L.icon({
+//     iconUrl: 'lib/leaflet/images/skull-crossbones-duotone.png',
+//     iconSize:     [35, 30], // size of the icon
+//     iconAnchor:   [25, 25], // point of the icon which will correspond to marker's location
+//     popupAnchor:  [0, -10] // point from which the popup should open relative to the iconAnchor
+// });
+//
+// // HML's car icon
+// var hmlcarIcon = L.icon({
+//     iconUrl: 'lib/leaflet/images/car-duotone.png',
+//     iconSize:     [35, 30], // size of the icon
+//     iconAnchor:   [25, 25], // point of the icon which will correspond to marker's location
+//     popupAnchor:  [0, -10] // point from which the popup should open relative to the iconAnchor
+// });
+//
+// // Best Buy icon
+// var bbIcon = L.icon({
+//     iconUrl: 'lib/leaflet/images/tags-duotone.png',
+//     iconSize:     [35, 30], // size of the icon
+//     iconAnchor:   [25, 25], // point of the icon which will correspond to marker's location
+//     popupAnchor:  [0, -10] // point from which the popup should open relative to the iconAnchor
+// });
+
 // Cell Towers
 var l602 = L.marker([39.291229, -76.615098], {icon: celltowerIcon}).bindPopup('Cell Tower L602'),
 		l608 = L.marker([39.255161, -76.675268], {icon: celltowerIcon}).bindPopup('Cell Tower L608'),
@@ -66,7 +114,11 @@ var hae_home = L.polygon([
 		[39.352999, -76.726198],
 		[39.348254, -76.732657],
 		[39.349714, -76.733494]
-]).bindPopup("Hae Min Lee's neighborhood").openPopup();
+], {
+    color: 'tan',
+    fillColor: 'tan',
+    fillOpacity: 0.3,
+}).bindPopup("Hae Min Lee's neighborhood").openPopup();
 var adnan_home = L.polygon([
     [39.304475, -76.7617],
 		[39.307439, -76.759104],
@@ -78,39 +130,64 @@ var adnan_home = L.polygon([
 		[39.303089, -76.756357],
 		[39.302649, -76.757623],
 		[39.302848, -76.75876]
-]).bindPopup("Adnan Syed's neighborhood").openPopup();
+], {
+    color: 'tan',
+    fillColor: 'tan',
+    fillOpacity: 0.3,
+}).bindPopup("Adnan Syed's neighborhood").openPopup();
 var jay_home = L.polygon([
     [39.287961, -76.749501],
 		[39.287994, -76.746615],
 		[39.284357, -76.74727],
 		[39.284324, -76.749855]
-]).bindPopup("Jay Wilds' neighborhood").openPopup();;
+], {
+    color: 'tan',
+    fillColor: 'tan',
+    fillOpacity: 0.3,
+}).bindPopup("Jay Wilds' neighborhood").openPopup();;
 var jenn_home = L.polygon([
     [39.296932, -76.729149],
 		[39.298618, -76.726767],
 		[39.297198, -76.725104],
 		[39.295521, -76.727496]
-]).bindPopup("Jenn Pusateri's neighborhood").openPopup();;
+], {
+    color: 'tan',
+    fillColor: 'tan',
+    fillOpacity: 0.3,
+}).bindPopup("Jenn Pusateri's neighborhood").openPopup();;
 var kristi_home = L.polygon([
     [39.261649, -76.700535],
 		[39.26351, -76.698539],
 		[39.262281, -76.696694],
 		[39.26032, -76.698754],
 		[39.261234, -76.700224]
-]).bindPopup("Kristi Vinson's (Not-her-real-name Cathy) neighborhood").openPopup();
+], {
+    color: 'tan',
+    fillColor: 'tan',
+    fillOpacity: 0.3,
+}).bindPopup("Kristi Vinson's (Not-her-real-name Cathy) neighborhood").openPopup();
 var patrick_home = L.polygon([
     [39.29188, -76.693754],
 		[39.292162, -76.689323],
 		[39.288575, -76.688969],
 		[39.288683, -76.689763],
 		[39.291573, -76.693625]
-]).bindPopup("Patrick's neighborhood").openPopup();
+], {
+    color: 'tan',
+    fillColor: 'tan',
+    fillOpacity: 0.3,
+}).bindPopup("Patrick's neighborhood").openPopup();
 var alonzo_home = L.polygon([
     [39.319683, -76.7352],
 		[39.321052, -76.733526],
 		[39.319936, -76.729733],
 		[39.318375, -76.730769]
-]).bindPopup("Alonzo Sellers' (Mr. S) neighborhood").openPopup();
+], {
+    color: 'tan',
+    fillColor: 'tan',
+    fillOpacity: 0.3,
+}).bindPopup("Alonzo Sellers' (Mr. S) neighborhood").openPopup();
+
 
 // Sensitive plaecs of interest (genreal neighborhoods) layer group
 var neighborhoods = L.layerGroup([hae_home, adnan_home, jay_home, jenn_home, kristi_home, patrick_home, alonzo_home]).addTo(mymap);
@@ -150,138 +227,9 @@ var forestpark = L.marker([39.323505, -76.688304]).bindPopup("Forest Park Neighb
 var superfresh = L.marker([39.287865, -76.764618]).bindPopup("Super Fresh Halal Market").openPopup().addTo(mymap); // Super Fresh Market
 var seven11 = L.marker([39.286238, -76.75235]).bindPopup("7-Eleven").openPopup().addTo(mymap); // 7-Eleven
 
-
-// Routes and Stops
-
-// // Mr. S body discovery
-// var sellers_route = L.polyline(sellers_route.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p><b>Alonzo's route to work</b><br>Distance:<b> 5.6 miles, 15 minutes</b></p>"); // 5.6 miles, 15 minutes
-// var body_discovery = L.polyline([
-// 		[39.301692, -76.699482],
-// 		[39.301414, -76.699502]
-// ]).addTo(mymap);
-// var sellers_stop = L.circle([39.301414, -76.699502], {
-//     color: 'red',
-//     fillColor: '#000000',
-//     fillOpacity: 0.5,
-//     radius: 15
-// }).addTo(mymap);
-//sellers_route.bindPopup("Mr. S's route").openPopup();
-
-// // Potential route HML planned on taking after school
-// var woodlawn_owings = L.polyline(woodlawn_owings.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 1:<b> Woodlawn to Owings Mill Lenscrafters</b><br>Distance:<b> 10.3 miles, 14 minutes</b></p>"); // 10.3 miles, 14 minutes
-// var owings_campfield = L.polyline(owings_campfield.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 2:<b> Lenscrafters to Campfield Early Learning Center</b><br>Distance:<b> 8 miles, 13 minutes</b></p>"); // 8 miles, 13 minutes
-// var owingspark_lens = L.polyline([
-// 		[39.40611, -76.7921],
-// 		[39.406257, -76.790271]
-// ]).addTo(mymap);
-// var hml_stop = L.circle([39.406095, -76.792272], {
-//     color: 'red',
-//     fillColor: '#000000',
-//     fillOpacity: 0.5,
-//     radius: 15
-// }).addTo(mymap);
-
-// Adnan's Day
-// var woodlawn_lib = L.polyline([
-// 		[39.316697, -76.736535],
-// 		[39.315371, -76.734422]
-// ]).addTo(mymap); // walks from Woodlawn high school to the library --- probably delete
-// var lib_track = L.polyline([
-// 		[39.316697, -76.736535],
-// 		[39.315105, -76.730281]
-//]).addTo(mymap); // walks from the library to the Woodlawn track --- probably delete
-// var woodlawn_kristi = L.polyline(woodlawn_kristi.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 1:<b> Woodlawn to Kristi's</b><br>Distance:<b> 7.1 miles, 16 minutes</b></p>"); // 7.1 miles, 16 minutes
-// var kristi_adnan = L.polyline(kristi_adnan.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 2:<b> Kristi's to Adnan's</b><br>Distance:<b> 6.6 miles, 12 minutes</b></p>"); // 6.6 miles. 12 minutes
-// var adnan_mosque = L.polyline(adnan_mosque.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 3:<b> Adnan's to Baltimore Islamic Society</b><br>Distance:<b> 0.8 miles, 4 minutes</b></p>"); // 0.8 miles, 4 minutes
-// var mosque_walk = L.polyline([
-// 		[39.303238, -76.747205],
-// 		[39.303512, -76.748056]
-// ]).addTo(mymap);
-// var ad_kristi_stop = L.circle([39.26187, -76.69853], {
-//     color: 'red',
-//     fillColor: '#000000',
-//     fillOpacity: 0.5,
-//     radius: 75
-// }).addTo(mymap);
-// var ad_adnan_stop = L.circle([39.30538, -76.75905], {
-//     color: 'red',
-//     fillColor: '#000000',
-//     fillOpacity: 0.5,
-//     radius: 75
-// }).addTo(mymap);
-// var ad_mosque_stop = L.circle([39.30325, -76.74703], {
-//     color: 'red',
-//     fillColor: '#000000',
-//     fillOpacity: 0.5,
-//     radius: 15
-// }).addTo(mymap)'s Version of Events
-
-// Interview #1 Routes
-var woodlawn_jay_route = L.polyline(woodlawn_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 1:<b> Woodlawn to Jay's</b><br>Distance:<b> 3.1 miles, 9 minutes</b></p>"); // 3.1 miles, 9 minutes
-var jay_westview_route = L.polyline(jay_westview.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 2:<b> Jay's to Westview Mall</b><br>Distance:<b> 1.0 miles, 4 minutes</b></p>"); // 1.0 miles, 4 minutes
-var westview_woodlawn_route = L.polyline(westview_woodlawn.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 3:<b> Westview Mall to Woodlawn</b><br>Distance:<b> 2.4 miles, 8 minutes</b></p>"); // 2.4 miles, 8 minutes
-var woodlawn_jenn_route = L.polyline(woodlawn_jenn.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 4:<b> Woodlawn to Jenn's</b><br>Distance:<b> 2.5 miles, 6 minutes</b></p>"); // 2.5 miles, 6 minutes
-var jenn_trunkpop_route = L.polyline(jenn_trunkpop.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 5:<b> Jenn's to Trunk-pop on Edmondson</b><br>Distance:<b> 4.2 miles, 13 minutes</b></p>"); // 4.2 miles, 13 minutes
-var trunkpop_i70_route = L.polyline(trunkpop_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 6:<b> Trunk-pop to I-70 Park-and-Ride</b><br>Distance:<b> 3.3 miles, 17 minutes</b></p>"); // 3.3 miles, 9 minutes
-var i70_cliffs_route = L.polyline(i70_cliffs.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 7:<b> I-70 Park-and-Ride to Cliffs at Patapsco</b><br>Distance:<b> 6.3 miles, 17 minutes</b></p>"); // 6.3 miles, 17 minutes
-var cliffs_woodlawn_route = L.polyline(cliffs_woodlawn.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 8:<b> Cliffs at Patapsco to Track Practice</b><br>Distance:<b> 5.6 miles, 15 minutes</b></p>"); // 5.6 miles, 15 minutes
-var woodlawn_mcds_route = L.polyline(woodlawn_mcds.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 9:<b> Track Practice to McDonald's</b><br>Distance:<b> 3.4 miles, 10 minutes</b></p>"); // 3.4 miles, 10 minutes
-var mcds_jay_route = L.polyline(mcds_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 10:<b> McDonald's to Jay's</b><br>Distance:<b> 0.5 miles, 2 minutes</b></p>"); // 0.5 miles, 2 minutes
-var jay_i70_route = L.polyline(jay_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 11:<b> Jay's to I-70 Park-and-Ride</b><br>Distance:<b> 3.4 miles, 8 minutes</b></p>"); // 3.4 miles, 8 minutes
-var i70_leakin_route = L.polyline(i70_leakin.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 12:<b> I-70 Park-and-Ride to Leakin Park B</b><br>Distance:<b> 1.4 miles, 4 minutes</b></p>"); // 1.4 miles, 4 minutes
-var leakin_lot_route = L.polyline(leakin_lot.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 13:<b> Leakin Park to Residential Lot</b><br>Distance:<b> 2.4 miles, 8 minutes</b></p>"); // 2.4 miles, 8 minutes
-var lot_westview_route = L.polyline(lot_westview.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 14:<b> Residential Lot to Westview Mall B</b><br>Distance:<b> 3.4 miles, 11 minutes</b></p>"); // 3.5 miles, 11 minutes
-var westview_jay_route = L.polyline(westview_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 15:<b> Westview Mall to Jay's</b><br>Distance:<b> 1.0 miles, 3 minutes</b></p>"); // 1.0 miles, 3 minutes
-var jay_seven11_route = L.polyline(jay_seven11.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 16:<b> Jay's to 7-Eleven</b><br>Distance:<b> 0.5 miles, 2 minutes</b></p>"); // 0.5 miles, 2 minutes
-
-// // Interview #2 Routes
-// var jenn_bb_route = L.polyline(jenn_bb.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 1:<b> Jenn's to Best Buy</b><br>Distance:<b> 3.8 miles, 8 minutes</b></p>"); // 3.8 miles, 8 minutes
-// var bb_i70_route = L.polyline(bb_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 2:<b> Best Buy to I-70 Park-and-Ride</b><br>Distance:<b> 3.4 miles, 9 minutes</b></p>"); // 3.4 miles, 9 minutes
-// var i70_forestpark_route = L.polyline(i70_forestpark.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 3:<b> I-70 Park-and-Ride to Forest Park Neighborhood</b><br>Distance:<b> 2.5 miles, 6 minutes</b></p>"); // 2.5 miles, 6 minutes
-// var forestpark_cliffs_route = L.polyline(forestpark_cliffs.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 4:<b> Forest Park to Cliffs at Patapsco</b><br>Distance:<b> 7.8 miles, 19 minutes</b></p>"); // 7.8 miles, 19 minutes
-// var cliffs_woodlawn_route = L.polyline(cliffs_woodlawn.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 5:<b> Cliffs at Patapsco to Track Practice</b><br>Distance:<b> 5.6 miles, 15 minutes</b></p>"); // 5.6 miles, 15 minutes
-// var woodlawn_kristi_route = L.polyline(woodlawn_kristi.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 6:<b> Track Practice to Kristi's</b><br>Distance:<b> 7.1 miles, 16 minutes</b></p>"); // 7.1 miles, 16 minutes
-// var kristi_jay_route = L.polyline(kristi_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 7:<b> Kristi's to Jay's</b><br>Distance:<b> 3.9 miles, 7 minutes</b></p>"); // 3.9 miles, 7 minutes
-// var jay_i70_route = L.polyline(jay_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 8:<b> Jay's to I-70 Park-and-Ride</b><br>Distance:<b> 3.4 miles, 8 minutes</b></p>"); // 3.4 miles, 8 minutes
-// var i70_leakin_route = L.polyline(i70_leakin.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 9:<b> I-70 Park-and-Ride to Leakin Park</b><br>Distance:<b> 1.4 miles, 4 minutes</b></p>"); // 1.4 miles, 4 minutes
-// var leakin_lot_route = L.polyline(leakin_lot.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 10:<b> Leakin Parl to Residential Lot</b><br>Distance:<b> 2.4 miles, 8 minutes</b></p>"); // 2.4 miles, 8 minutes
-// var lot_westview_route = L.polyline(lot_westview.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 11:<b> Residential Lot to Westview Mall</b><br>Distance:<b> 3.5 miles, 11 minutes</b></p>"); // 3.5 miles, 11 minutes
-// var westview_jay_route = L.polyline(westview_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 12:<b> Westview Mall to Jay's</b><br>Distance:<b> 1.0 miles, 3 minutes</b></p>"); // 1.0 miles, 3 minutes
-// var jay_fandm_route = L.polyline(jay_fandm.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 13:<b> Jay's to F&M</b><br>Distance:<b> 0.9 miles, 3 minutes</b></p>"); // 0.9 miles, 3 minutes
-//
-// // Testimony Routes
-// var jenn_bb_route = L.polyline(jenn_bb.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 1:<b> Jenn's to Best Buy</b><br>Distance:<b> 3.8 miles, 8 minutes</b></p>"); // 3.8 miles, 8 minutes
-// var bb_i70_route = L.polyline(bb_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 2:<b> Best Buy to I-70 Park-and-Ride</b><br>Distance:<b> 3.4 miles, 9 minutes</b></p>"); // 3.4 miles, 9 minutes
-// var i70_patrick_route = L.polyline(i70_patrick.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 3:<b> I-70 Park-and-Ride to Patrick's</b><br>Distance:<b> 2.3 miles, 7 minutes</b></p>"); // 2.3 miles, 7 minutes
-// var patrick_forestpark_route = L.polyline(patrick_forestpark.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 4:<b> Patrick's to Forest Park Neighborhood</b><br>Distance:<b> 4.2 miles, 12 minutes</b></p>"); // 4.2 miles, 12 minutes
-// var forestpark_woodlawn_route = L.polyline(forestpark_woodlawn.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 5:<b> Forest Park to Track Practice</b><br>Distance:<b> 3.4 miles, 8 minutes</b></p>"); // 3.4 miles, 8 minutes
-// var woodlawn_kristi_route = L.polyline(woodlawn_kristi.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 6:<b> Track Practice to Kristi's</b><br>Distance:<b> 7.1 miles, 16 minutes</b></p>"); // 7.1 miles, 16 minutes
-// var kristi_jay_route = L.polyline(kristi_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 7:<b> Kristi's to Jay's</b><br>Distance:<b> 3.9 miles, 7 minutes</b></p>"); // 3.9 miles, 7 minutes
-// var jay_i70_route = L.polyline(jay_i70.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 8:<b> Jay's to I-70 Park-and-Ride</b><br>Distance:<b> 3.4 miles, 8 minutes</b></p>"); // 3.4 miles, 8 minutes
-// var i70_leakin_route = L.polyline(i70_leakin.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 9:<b> I-70 Park-and-Ride to Leakin Park</b><br>Distance:<b> 1.4 miles, 4 minutes</b></p>"); // 1.4 miles, 4 minutes
-// var leakin_lot_route = L.polyline(leakin_lot.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 10:<b> Leakin Park to Residential Lot</b><br>Distance:<b> 2.4 miles, 8 minutes</b></p>"); // 2.4 miles, 8 minutes
-// var lot_westview_route = L.polyline(lot_westview.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 11:<b> Residential Lot to Westview Mall</b><br>Distance:<b> 3.5 miles, 11 minutes</b></p>"); // 3.5 miles, 11 minutes
-// var westview_jay_route = L.polyline(westview_jay.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 12:<b> Westview Mall to Jay's</b><br>Distance:<b> 1.0 miles, 3 minutes</b></p>"); // 1.0 miles, 3 minutes
-// var jay_superfresh_route = L.polyline(jay_superfresh.features.map(feature => [feature.geometry.coordinates[1],feature.geometry.coordinates[0]])).bindPopup("<p>Trip 13:<b> Jay's to Super Fresh Halal Market</b><br>Distance:<b> 1.1 miles, 4 minutes</b></p>"); // 1.1 miles, 4 minutes
-
 // create list of routes
 var route_list = [
-		woodlawn_jay_route,
-		jay_westview_route,
-		westview_woodlawn_route,
-		woodlawn_jenn_route,
-		jenn_trunkpop_route,
-		trunkpop_i70_route,
-		i70_cliffs_route,
-		cliffs_woodlawn_route,
-		woodlawn_mcds_route,
-		mcds_jay_route,
-		jay_i70_route,
-		i70_leakin_route,
-		leakin_lot_route,
-		lot_westview_route,
-		westview_jay_route,
-		jay_seven11_route
+
 ];
 
 // starting route index to iterate on in the next_ and prev_route functions below
@@ -335,8 +283,8 @@ function prev_route(){
 
 //popup message that is turned on when webpage loads
 var popup = L.popup()
-    .setLatLng([39.31647, -76.734728])
-    .setContent("Story Starts Here!")
+    .setLatLng([39.316092, -76.734438])
+    .setContent("The story starts here, click me!")
     .openOn(mymap);
 
 // function that return the coordinates on the map when you don't click on a feature, button, or layer menu

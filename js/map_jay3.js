@@ -66,7 +66,11 @@ var hae_home = L.polygon([
 		[39.352999, -76.726198],
 		[39.348254, -76.732657],
 		[39.349714, -76.733494]
-]).bindPopup("Hae Min Lee's neighborhood").openPopup();
+], {
+    color: 'tan',
+    fillColor: 'tan',
+    fillOpacity: 0.3,
+}).bindPopup("Hae Min Lee's neighborhood").openPopup();
 var adnan_home = L.polygon([
     [39.304475, -76.7617],
 		[39.307439, -76.759104],
@@ -78,39 +82,63 @@ var adnan_home = L.polygon([
 		[39.303089, -76.756357],
 		[39.302649, -76.757623],
 		[39.302848, -76.75876]
-]).bindPopup("Adnan Syed's neighborhood").openPopup();
+], {
+    color: 'tan',
+    fillColor: 'tan',
+    fillOpacity: 0.3,
+}).bindPopup("Adnan Syed's neighborhood").openPopup();
 var jay_home = L.polygon([
     [39.287961, -76.749501],
 		[39.287994, -76.746615],
 		[39.284357, -76.74727],
 		[39.284324, -76.749855]
-]).bindPopup("Jay Wilds' neighborhood").openPopup();;
+], {
+    color: 'tan',
+    fillColor: 'tan',
+    fillOpacity: 0.3,
+}).bindPopup("Jay Wilds' neighborhood").openPopup();;
 var jenn_home = L.polygon([
     [39.296932, -76.729149],
 		[39.298618, -76.726767],
 		[39.297198, -76.725104],
 		[39.295521, -76.727496]
-]).bindPopup("Jenn Pusateri's neighborhood").openPopup();;
+], {
+    color: 'tan',
+    fillColor: 'tan',
+    fillOpacity: 0.3,
+}).bindPopup("Jenn Pusateri's neighborhood").openPopup();;
 var kristi_home = L.polygon([
     [39.261649, -76.700535],
 		[39.26351, -76.698539],
 		[39.262281, -76.696694],
 		[39.26032, -76.698754],
 		[39.261234, -76.700224]
-]).bindPopup("Kristi Vinson's (Not-her-real-name Cathy) neighborhood").openPopup();
+], {
+    color: 'tan',
+    fillColor: 'tan',
+    fillOpacity: 0.3,
+}).bindPopup("Kristi Vinson's (Not-her-real-name Cathy) neighborhood").openPopup();
 var patrick_home = L.polygon([
     [39.29188, -76.693754],
 		[39.292162, -76.689323],
 		[39.288575, -76.688969],
 		[39.288683, -76.689763],
 		[39.291573, -76.693625]
-]).bindPopup("Patrick's neighborhood").openPopup();
+], {
+    color: 'tan',
+    fillColor: 'tan',
+    fillOpacity: 0.3,
+}).bindPopup("Patrick's neighborhood").openPopup();
 var alonzo_home = L.polygon([
     [39.319683, -76.7352],
 		[39.321052, -76.733526],
 		[39.319936, -76.729733],
 		[39.318375, -76.730769]
-]).bindPopup("Alonzo Sellers' (Mr. S) neighborhood").openPopup();
+], {
+    color: 'tan',
+    fillColor: 'tan',
+    fillOpacity: 0.3,
+}).bindPopup("Alonzo Sellers' (Mr. S) neighborhood").openPopup();
 
 // Sensitive plaecs of interest (genreal neighborhoods) layer group
 var neighborhoods = L.layerGroup([adnan_home, jay_home, jenn_home, kristi_home, patrick_home]).addTo(mymap);

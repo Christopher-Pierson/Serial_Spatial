@@ -141,7 +141,7 @@ var alonzo_home = L.polygon([
 }).bindPopup("Alonzo Sellers' (Mr. S) neighborhood").openPopup();
 
 // Sensitive plaecs of interest (genreal neighborhoods) layer group
-var neighborhoods = L.layerGroup([hae_home, adnan_home, jay_home, jenn_home, kristi_home, patrick_home, alonzo_home]);
+var neighborhoods = L.layerGroup([hae_home, adnan_home, jay_home, jenn_home, kristi_home, patrick_home, alonzo_home]).addTo(mymap);
 
 // layer groups to be added to layer controls
 var overlayMaps = {

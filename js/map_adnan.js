@@ -202,12 +202,6 @@ function prev_route(){
 		}
 }
 
-//popup message that is turned on when webpage loads
-var popup = L.popup()
-    .setLatLng([39.31647, -76.734728])
-    .setContent("Adnan's Day")
-    .openOn(mymap);
-
 // function that return the coordinates on the map when you don't click on a feature, button, or layer menu
 function onMapClick(e) {
 	alert("You clicked the map at " + e.latlng);
